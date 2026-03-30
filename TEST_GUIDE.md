@@ -2,12 +2,12 @@
 
 ## Hızlı Test Özeti
 
-### ✅ Tamamlanmış Testler
+###  Tamamlanmış Testler
 - **Backend Unit Tests**: 25/25 passed
 - **Backend Linter**: 0 errors
 - **Frontend Linter**: 0 errors
-- **Backend Running**: http://localhost:3000 ✅
-- **Frontend Running**: http://localhost:5174 ✅
+- **Backend Running**: http://localhost:3000 
+- **Frontend Running**: http://localhost:5174 
 
 ---
 
@@ -20,12 +20,12 @@ npm test
 ```
 
 **Sonuç**: 25/25 tests passed
-- ✅ Serial number validation
-- ✅ Maintenance calculations (50h OR 90 days)
-- ✅ Mission state transitions
-- ✅ Overlap detection
-- ✅ Drone retirement with upcoming missions
-- ✅ Fleet health report logic
+-  Serial number validation
+-  Maintenance calculations (50h OR 90 days)
+-  Mission state transitions
+-  Overlap detection
+-  Drone retirement with upcoming missions
+-  Fleet health report logic
 
 ### Coverage Report
 ```bash
@@ -149,20 +149,20 @@ Invoke-RestMethod -Uri "http://localhost:3000/maintenance-logs" -Method POST -Bo
 #### Dashboard Testi
 1. Tarayıcıda **http://localhost:5174** aç
 2. Kontrol et:
-   - ✅ "SkyOps Mission Control" başlığı görünüyor mu?
-   - ✅ Fleet Overview kartları (Total Drones, Available, In Mission, Maintenance)
-   - ✅ Maintenance Alerts (varsa) kırmızı uyarı kutusu
-   - ✅ Drone Fleet tablosu (Serial Number, Model, Status, Flight Hours, Next Maintenance, Actions)
-   - ✅ Mission View tablosu (Mission Name, Drone, Status, Planned Start/End)
+   -  "SkyOps Mission Control" başlığı görünüyor mu?
+   -  Fleet Overview kartları (Total Drones, Available, In Mission, Maintenance)
+   -  Maintenance Alerts (varsa) kırmızı uyarı kutusu
+   -  Drone Fleet tablosu (Serial Number, Model, Status, Flight Hours, Next Maintenance, Actions)
+   -  Mission View tablosu (Mission Name, Drone, Status, Planned Start/End)
 
 #### Drone Detail Page Testi
 1. Dashboard'da bir drone'un **"View Details"** linkine tıkla
 2. Kontrol et:
-   - ✅ URL `/drones/{id}` formatında mı?
-   - ✅ Drone bilgileri (Serial Number, Model, Status, Flight Hours, Maintenance dates)
-   - ✅ Mission History tablosu (drone'a ait tüm missions)
-   - ✅ Maintenance History tablosu (drone'a ait maintenance logs)
-   - ✅ "Back to Dashboard" linki çalışıyor mu?
+   -  URL `/drones/{id}` formatında mı?
+   -  Drone bilgileri (Serial Number, Model, Status, Flight Hours, Maintenance dates)
+   -  Mission History tablosu (drone'a ait tüm missions)
+   -  Maintenance History tablosu (drone'a ait maintenance logs)
+   -  "Back to Dashboard" linki çalışıyor mu?
 
 #### Responsive Design Testi
 1. Browser'ı küçült (mobile view)
@@ -184,10 +184,10 @@ npm run test:e2e
 ```
 
 ### Test Coverage
-- ✅ Dashboard load & fleet overview display
-- ✅ Mission View section display
-- ✅ Drone detail page navigation
-- ✅ Maintenance alerts display
+-  Dashboard load & fleet overview display
+-  Mission View section display
+-  Drone detail page navigation
+-  Maintenance alerts display
 
 ### Test Raporu
 ```bash
@@ -201,23 +201,23 @@ npx playwright show-report
 ### Test Edilmesi Gereken Kurallar
 
 #### Drone Rules
-- ✅ Serial number format (`SKY-XXXX-XXXX`)
-- ✅ Maintenance due: 50 flight hours OR 90 days
-- ✅ Only AVAILABLE drones can be assigned to missions
-- ✅ Cannot retire drone with upcoming missions
+-  Serial number format (`SKY-XXXX-XXXX`)
+-  Maintenance due: 50 flight hours OR 90 days
+-  Only AVAILABLE drones can be assigned to missions
+-  Cannot retire drone with upcoming missions
 
 #### Mission Rules
-- ✅ Valid state transitions (PLANNED → PRE_FLIGHT_CHECK → IN_PROGRESS → COMPLETED/ABORTED)
-- ✅ No overlapping missions for same drone
-- ✅ Cannot schedule in past
-- ✅ Drone becomes IN_MISSION when mission starts
-- ✅ Flight hours logged on completion
-- ✅ Abort requires reason
+-  Valid state transitions (PLANNED → PRE_FLIGHT_CHECK → IN_PROGRESS → COMPLETED/ABORTED)
+-  No overlapping missions for same drone
+-  Cannot schedule in past
+-  Drone becomes IN_MISSION when mission starts
+-  Flight hours logged on completion
+-  Abort requires reason
 
 #### Maintenance Rules
-- ✅ Updates drone maintenance dates
-- ✅ Flight hours consistency check (±0.5h tolerance)
-- ✅ Cannot log maintenance during active mission
+-  Updates drone maintenance dates
+-  Flight hours consistency check (±0.5h tolerance)
+-  Cannot log maintenance during active mission
 
 ---
 
@@ -327,7 +327,7 @@ Olası sorunlar:
 
 ---
 
-## 🎯 Son Kontrol Listesi (Teslim Öncesi)
+##  Son Kontrol Listesi (Teslim Öncesi)
 
 - [x] README.md güncel ve detaylı
 - [x] .env.example dosyaları oluşturulmuş
@@ -346,7 +346,7 @@ Olası sorunlar:
 
 ---
 
-## 📦 Teslim Formatı
+##  Teslim Formatı
 
 ### GitHub/GitLab Repo
 ```bash
@@ -369,7 +369,7 @@ Compress-Archive -Path "c:\Users\Bilal\Desktop\skyops-mission-control\*" -Destin
 
 ---
 
-## 🚀 Demo İçin Hızlı Başlatma
+##  Demo İçin Hızlı Başlatma
 
 ```bash
 # Terminal 1: PostgreSQL
@@ -391,7 +391,7 @@ http://localhost:5174
 
 ---
 
-## 📊 Beklenen Test Sonuçları
+##  Beklenen Test Sonuçları
 
 ### Backend
 ```
@@ -400,17 +400,17 @@ Tests:       25 passed, 25 total
 ```
 
 ### API Smoke Test
-- `GET /` → API info ✅
-- `GET /fleet-health` → Metrics ✅
-- `GET /drones` → Paginated list ✅
-- `GET /missions` → Filtered list ✅
-- `POST /drones` → Validation ✅
-- `PATCH /drones/:id/retire` → Business rule check ✅
+- `GET /` → API info 
+- `GET /fleet-health` → Metrics 
+- `GET /drones` → Paginated list 
+- `GET /missions` → Filtered list 
+- `POST /drones` → Validation 
+- `PATCH /drones/:id/retire` → Business rule check 
 
 ### Frontend (Browser)
-- Dashboard load ✅
-- Fleet overview cards ✅
-- Drone table ✅
-- Mission table ✅
-- Drone detail page ✅
-- Navigation ✅
+- Dashboard load 
+- Fleet overview cards 
+- Drone table 
+- Mission table 
+- Drone detail page 
+- Navigation 
