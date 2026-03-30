@@ -1,0 +1,5 @@
+export enum DroneModel {
+  PHANTOM_4 = 'PHANTOM_4',
+  MATRICE_300 = 'MATRICE_300',
+  MAVIC_3_ENTERPRISE = 'MAVIC_3_ENTERPRISE',
+}

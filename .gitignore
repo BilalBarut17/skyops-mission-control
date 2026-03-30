@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+coverage/
+test-results/
+playwright-report/
+.turbo
+build/
+*.tsbuildinfo
+.vscode/
+.idea/

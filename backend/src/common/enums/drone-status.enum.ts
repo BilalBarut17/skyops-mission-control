@@ -1,0 +1,6 @@
+export enum DroneStatus {
+  AVAILABLE = 'AVAILABLE',
+  IN_MISSION = 'IN_MISSION',
+  MAINTENANCE = 'MAINTENANCE',
+  RETIRED = 'RETIRED',
+}
